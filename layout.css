@@ -2,71 +2,96 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-size: 1.6rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #4d6568;
-  color: white;
-  line-height: 110%;
-  font-weight: 200;
+  padding-top: 184.38px;
   margin: auto;
+  background-color: #1b1a1d;
+  color: white;
+  font-size: 1.6rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  line-height: normal;
 }
 main {
-  max-width: 1400px;
-  padding: 3rem;
+  max-width: 1000px;
+  padding: 2rem;
+  padding-top: 0rem;
   margin: auto;
 }
-/* Paddings and margins */
-.transparentbox,
-header,
-#examples,
-#menneisyys {
-  padding: 3rem;
+h1 {
+  color: #fd7291;
 }
-article {
-  padding: 1rem;
+
+/* Paddings and margins */
+
+h2,
+section {
+  margin-block-end: 3rem;
+}
+h3,
+figure,
+label,
+input {
+  margin-block-end: 1rem;
+}
+#examples {
+  padding-block: 5rem;
+  padding-inline: 2rem;
+}
+.transparentbox {
+  padding: 2rem;
+}
+.transparentbox p {
+  margin-block-end: 1rem;
 }
 .grey {
   padding: 0rem;
   padding-top: 1rem;
 }
-
-h2,
-p,
-label,
-input,
-#menneisyys {
-  margin-block-end: 3rem;
-}
-h3,
-figure {
-  margin-block-end: 1rem;
+.cards {
+  max-width: 1040px;
+  margin: auto;
+  margin-block-end: 2rem;
 }
 article p {
-  margin-block-end: 0rem;
+  margin-block-end: 1rem;
 }
+
 /* */
+
 a {
   text-decoration: none;
-  color: white;
+  color: inherit;
 }
 a:hover {
-  text-decoration: underline;
+  color: #fd7291;
 }
-header {
-  background-color: black;
-  font-size: 2rem;
-}
-.navbar,
 .footer {
-  margin-inline: 3rem;
-  max-width: 1400px;
+  color: #ffdfe6;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #ffdfe6;
+  background-color: #1b1a1d;
+  padding-block: 2rem;
+  font-size: 2rem;
+  margin-block-end: 0;
+}
+.navbar {
+  padding-inline: 3rem;
+  max-width: 1000px;
   margin: auto;
 }
+
 h2 {
   color: #ffdfe6;
   font-size: 2.5rem;
+  scroll-margin-top: 184.38px;
+  padding-top: 2rem;
 }
+
 #examples {
   background-image: url("images/asael-pena-7AFC_EoBMj8-unsplash.jpg");
   background-size: cover;
@@ -83,36 +108,50 @@ h2 {
   padding-inline-start: 2rem;
 }
 #examples a {
-  color: #fd7291;
+  color: white;
   font-style: italic;
+}
+#examples a:hover {
+  color: #ffdfe6;
 }
 #menneisyys {
   color: black;
-  background-color: white;
+  background-color: #ffdfe6;
   margin-block-start: -3rem;
+  padding: 1rem;
 }
 #menneisyys h2 {
   color: black;
 }
 article {
-  border: 1.5px grey solid;
   border-radius: 1rem;
-  margin: auto;
+  background-color: white;
+  padding: 1rem;
 }
 article h3 {
+  color: #fd7291;
   font-weight: bold;
   font-size: 2rem;
   text-align: center;
 }
-img {
+
+article img {
   max-width: 100%;
+  border-radius: 50%;
+}
+article a {
+  color: #fd7291;
+  text-decoration: italic;
+}
+article a:hover {
+  color: #ffdfe6;
 }
 .grey {
-  border-top: 1.5px darkcyan solid;
-  overflow: hidden;
+  border-block-start: 1.5px #ffdfe6 solid;
+  overflow: clip;
 }
-.grey h2 {
-  padding-top: 1rem;
+.grey p {
+  min-height: 233.33px;
 }
 .grey img {
   display: block;
@@ -121,21 +160,21 @@ img {
   float: right;
   max-width: 350px;
   margin-inline-start: 3rem;
-  margin-block-end: 1rem;
+  margin-block-end: 2rem;
 }
 #tulevaisuus-img {
   float: left;
   max-width: 350px;
   margin-inline-end: 3rem;
-  margin-block-end: 1rem;
+  margin-block-end: 2rem;
 }
 footer {
-  padding-inline: 3rem;
+  padding-inline: 2rem;
 }
 .footer {
-  border-block-start: 1px solid white;
+  border-block-start: 1.5px #ffdfe6 solid;
   padding-block: 2rem;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -164,24 +203,64 @@ footer {
   flex-grow: 1;
   flex-basis: 100%;
 }
-article.card {
+.card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 1rem;
 }
-article.card > * {
+.card > * {
   flex-grow: 1;
   flex-basis: 100%;
 }
-.footer {
+.form-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.form-row label {
+  flex-grow: 0;
+  flex-basis: 100%;
+}
+.form-row input {
+  flex-basis: 100%;
+  flex-grow: 0;
+  padding: 0.5rem;
+}
+.submit {
+  text-align: center;
+}
+#submitbutton {
+  padding: 1rem;
+  background-color: #fd7291;
+  color: white;
+  border-radius: 0.5rem;
+  border: 0px;
+  margin-top: 1rem;
+}
+#submitbutton:hover {
+  background-color: #ffdfe6;
+  color: #fd7291;
 }
 
 /* Tablet view */
 @media screen and (min-width: 426px) {
+  body {
+    padding-top: 140.63px;
+  }
+  main {
+    padding: 3rem;
+    padding-top: 0rem;
+  }
+  h2 {
+    scroll-margin-top: 140.63px;
+  }
+  #examples {
+    padding-inline: 5rem;
+  }
   .navbar {
     text-align: left;
-    justify-content: end; /* TÄMÄ LAITTAA OIKEALLE */
+    justify-content: end;
   }
   .navbar > * {
     flex-grow: 0;
@@ -191,9 +270,7 @@ article.card > * {
   .navbar > .header1 {
     flex-basis: 100%;
     flex-grow: 0;
-    justify-self: end;
     margin-inline-start: 0rem;
-    /* margin-block-end: 0rem; */
   }
   .navbar > .contact-link {
     margin-top: 1rem;
@@ -205,23 +282,20 @@ article.card > * {
   .navbar > .contentlink {
     flex-grow: 0;
   }
-  /* article.card > * {
-    flex-basis: 0;
+  footer {
+    padding-inline: 3rem;
   }
-  article.card > figure {
-    order: 3;
-    margin-block-end: 0rem;
-  }
-  article.card > h3 {
-    flex-grow: 2;
-    flex-basis: 100%;
-    text-align: center;
-  } */
 }
 
 /* Desktop view */
 
 @media screen and (min-width: 769px) {
+  body {
+    padding-top: 66.88px;
+  }
+  h2 {
+    scroll-margin-top: 66.88px;
+  }
   .navbar {
     flex-wrap: nowrap;
     justify-content: end;
@@ -237,50 +311,56 @@ article.card > * {
   .navbar > .header1 {
     margin-block-end: 0rem;
   }
-
   .navbar > .contact-link {
     margin-top: 0rem;
     margin-inline-start: 1rem;
   }
   .cards {
     flex-wrap: nowrap;
-    gap: 2rem;
     justify-content: center;
+    padding-inline: 2rem;
   }
   .cards > * {
     flex-basis: 0;
     flex-grow: 1;
-  }
-  article.card {
     max-width: 350px;
-    margin: unset;
-    align-content: start;
-    flex-grow: 1;
     gap: 1rem;
   }
-  article.card > figure {
-    order: 1;
+  article.card {
+    display: block;
   }
-  article.card > * {
-    order: 1;
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
-  .grey {
-    margin-block-end: 2rem;
+  .form-row label {
+    flex-grow: 2;
+    flex-basis: 0;
+    margin-block-end: 0;
+  }
+  .form-row input {
+    flex-basis: 0;
+    flex-grow: 7;
   }
 }
 
+/* Kortit vaakatasossa tablet-näkymässä */
 @media screen and (min-width: 426px) and (max-width: 769px) {
   article.card {
     display: block;
-    margin-inline: -2rem;
+    height: auto;
+    overflow: hidden;
   }
   article.card h3 {
     display: block;
     min-width: 100%;
+    text-align: left;
   }
   article.card img {
     max-width: 200px;
     float: right;
     margin-left: 0.5rem;
+    display: block;
   }
 }

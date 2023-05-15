@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="layout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap"
+      rel="stylesheet"
+    />
     <script></script>
   </head>
 
@@ -15,12 +21,15 @@
     <header>
       <nav>
         <ul class="navbar">
-          <li class = "header1"><h1>Portfolio</h1></li>
-          <li class="contentlink"><a href="#menneisyys">Menneisyys</a></li>
-          <li class="contentlink"><a href="#nykyisyys">Nykyisyys</a></li>
-          <li class="contentlink"><a href="#tulevaisuus">Tulevaisuus</a></li>
-          <li class="contact-link"><a href="#tulevaisuus">Yhteystiedot</a></li>
+          <li class="header1">
+            <h1><a href="#">Portfolio</a></h1>
+          </li>
+          <li class="contentlink"><a href="#past">Menneisyys</a></li>
+          <li class="contentlink"><a href="#today">Nykyisyys</a></li>
+          <li class="contentlink"><a href="#future">Tulevaisuus</a></li>
+          <li class="contact-link"><a href="#contact">Yhteystiedot</a></li>
         </ul>
+        <div class="void"></div>
       </nav>
     </header>
 
@@ -44,7 +53,7 @@
       </section>
 
       <section id="menneisyys">
-        <h2>Menneisyys</h2>
+        <h2 id="past">Menneisyys</h2>
         <div class="cards">
           <article class="card">
             <figure>
@@ -54,7 +63,11 @@
               />
             </figure>
             <h3>Card title</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, impedit ex vel porro natus maiores?</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos,
+              impedit ex vel porro natus maiores?
+            </p>
+            <a href="">See more</a>
           </article>
           <article class="card">
             <figure>
@@ -64,7 +77,13 @@
               />
             </figure>
             <h3>Card title</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, mollitia ducimus ratione quas expedita nihil eaque molestiae assumenda cupiditate maiores labore iusto optio soluta voluptate? Repellendus deserunt dolore culpa debitis.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Recusandae, mollitia ducimus ratione quas expedita nihil eaque
+              molestiae assumenda cupiditate maiores labore iusto optio soluta
+              voluptate? Repellendus deserunt dolore culpa debitis.
+            </p>
+            <a href="">See more</a>
           </article>
           <article class="card">
             <figure>
@@ -74,17 +93,23 @@
               />
             </figure>
             <h3>Card title</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus autem porro pariatur sit? Facere eveniet expedita aliquam blanditiis harum deserunt!</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+              autem porro pariatur sit? Facere eveniet expedita aliquam
+              blanditiis harum deserunt!
+            </p>
+            <a href="">See more</a>
           </article>
         </div>
       </section>
 
-      <section id="nykyisyys" class="grey">
-        <h2>Nykyisyys</h2>
+      <section class="grey">
+        <h2 id="today">Nykyisyys</h2>
         <figure>
           <img
             src="images/honey-yanibel-minaya-cruz-8bBppB2taAU-unsplash.jpg"
-            alt="Girl feeding pigeons in Colonial Zone, Santo Domingo" id = "nykyisyys-img"
+            alt="Girl feeding pigeons in Colonial Zone, Santo Domingo"
+            id="nykyisyys-img"
           />
         </figure>
         <p>
@@ -104,11 +129,12 @@
       </section>
 
       <section id="tulevaisuus" class="grey">
-        <h2>Tulevaisuus</h2>
+        <h2 id="future">Tulevaisuus</h2>
         <figure>
           <img
             src="images/kevin-olson-CGW2gGerh-s-unsplash.jpg"
-            alt="Small street after rain in Colonial Zone, Santo Domingo" id="tulevaisuus-img"
+            alt="Small street after rain in Colonial Zone, Santo Domingo"
+            id="tulevaisuus-img"
           />
         </figure>
         <p>
@@ -127,8 +153,8 @@
         </p>
       </section>
 
-      <section id="contact" class="grey">
-        <h2>Contact me</h3>
+      <section class="grey">
+        <h2 id="contact">Contact me</h2>
         <form>
           <div class="form-row">
             <label for="name">Nimi</label>
